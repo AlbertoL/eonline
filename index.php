@@ -8,36 +8,58 @@
 </head>
 <body>
 	<div class="contenedor">
-	<header>
-		<nav>
-			<h1>E-OnLine</h1>
-			<ul>
-				<li><a href="#">Inicio</a> </li>
-				<li><a href="#">Cursos</a> </li>
-				<li><a href="#">Instituciones</a>  </li>
-				<li><a href="#">Contacto</a> </li>
-			</ul>
-		</nav>
-	</header>
-	<div class="promo">
-		<div class="des">
-			<h1>Educación OnLine</h1>
-			<p>
-				Plataforma virtual para <span>Instituciones</span>  y <span>Profesores.</span> 
+		<header>
+			<nav>
+				<div class="logo">
+					<img src="img/logo.png" alt="logo">
+				</div>
+				<ul>
+					<li><a href="#">INICIO</a> </li>
+					<li><a href="#">CURSOS</a> </li>
+					<li><a href="#">INSTITUCIONES</a> </li>
+					<li><a href="#">CONTACTO</a></li>
+				</ul>
+			</nav>
+			<div class="titulo">
+				<h1>CURSOS, CAPACITACIÓN, ONLINE</h1>
+				<h2>DESCUBRE LAS HERRAMIENTAS QUE TENEMOS PARA TI</h2>
+				<div class="boton">
+					<a href="#">CONOCER MÁS</a>
+				</div>
+			</div>
+		</header>
+		<div class="bienvenidos">
+			<h2>Bienvenidos a Educación On-Line</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quasi nisi totam dolorum 
+			itaque reiciendis quo, qui veniam quas, accusantium fuga. Repudiandae laboriosam tempora animi 
+			consequatur dolor vel quos, corporis.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam excepturi nulla magni vitae 
+			assumenda, ex, placeat distinctio aperiam explicabo libero vel voluptatem non adipisci et doloribus 
+			blanditiis aliquid iste eius.
 			</p>
-			<input class="boton" type="button" onclick="location.href='#'" value="Registrate Ahora"/>
-			<input class="boton" type="button" onclick="location.href='#'" value="Ver Planes"/>
 		</div>
-		<div class="dimg">
-			<img src="img/bg.png" width="70%" alt="logo"/>
+		<div class="icon_descripcion">
+		<h2>Encontrarás</h2>
+			<div class="icon_resena">
+				<img src="img/icon/cloud.png" alt="cloud">
+				<h2>Sube Archivos</h2>
+			</div>
+			<div class="icon_resena">
+				<img src="img/icon/note.png" alt="note">
+				<h2>Crea Test</h2>
+			</div>
+			<div class="icon_resena">
+			<img src="img/icon/chat.png"  alt="chat">
+				<h2>Chat</h2>
+			</div>
+			<div class="icon_resena">
+			<img src="./img/icon/video.png" alt="video">
+				<h2>Videos</h2>
+			</div>
+		</div>
+		<div class="auspiciadores">
+			<h2>Confían en nosotros</h2>
 		</div>
 	</div>
-	<div class="d_plataforma">
-		Únete y se parte de esta nueva forma de enseñar.
-		Incrementa tus posibilidades de alcanzar a más estudiantes.
-	</div>
-	</div>
-	
-	
 </body>
 </html>
