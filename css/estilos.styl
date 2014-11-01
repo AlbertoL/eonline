@@ -13,10 +13,11 @@ body
 	padding 0
 
 .contenedor
-	background url('../img/bg/bg.jpg')
-	background-position 0px -290px
+	background url(../img/bg/bg.jpg)
+	background-position 0px -300px
 	background-repeat no-repeat
-	background-size 100% 58%
+	background-size 100% 39%
+	max-width 1400px
 
 header
 	background rgba(0, 0, 0, 0.4)
@@ -124,17 +125,112 @@ header
 	height 310px
 	overflow hidden
 	
+	h2
+		font-family din
+		font-size 2.6em
+		margin 10px 0px 0px 0px
+	
 	.icon_resena
 		display inline-block
 		margin 40px 15px
 		text-align center
 		width 180px
 		
+		h2
+			font-size 2em
+		
 		img
 			width 60%
 
 .auspiciadores
-	background gris_suave
+	background blanco
+	color negro
 	height 400px
 	overflow hidden
-	color negro
+	
+	h2
+		font-family din
+		font-size 3em
+		font-weight 100
+		text-transform capitalize
+	
+	.logo_cca
+		display inline-block
+		width 300px
+		
+		img
+			width 100%
+	
+	.descripcion_cca
+		display inline-block
+		width 500px
+		vertical-align top
+		p 
+			color negro
+
+.des_promo
+	background #F3F3F3
+	color #333333
+	padding 40px 0px 60px 0px
+
+	.logo_promo
+		display inline-block
+		width 330px
+		
+		img
+			width 100%
+			margin-top 16px
+	
+	.p_promo
+		display inline-block
+		margin-right 16px
+		text-align left
+		vertical-align top
+		width 500px
+		
+		h2
+			font-family din
+			font-size 2.3em
+		
+		p 
+			font-family ubu
+			font-size 1.3em
+			font-weight 100
+			
+		ul 
+			list-style-image url(../img/icon/list/tick2.png)
+			line-height 16px
+			
+			li
+				font-family ubu
+				font-size 1.3em
+				list-style-position inside
+				padding 5px 0px
+				vertical-align top
+
+.inicia
+	background #1D1D21
+	height 180px
+	overflow hidden
+	&:hover
+		background #FF4545
+		transition 1.3s
+	
+	h2
+		font-size 4.2em
+		font-family din
+		// vertical-align top
+		a 
+			color #ffffff
+			text-decoration none
+		img
+			bottom 0
+			vertical-align top
+			width 70px
+.pie
+	height 300px
+	background #232228
+	overflow hidden
+	font-family din
+	font-weight 100
+	font-size 1.6em

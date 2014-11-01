@@ -59,6 +59,42 @@
 		</div>
 		<div class="auspiciadores">
 			<h2>Confían en nosotros</h2>
+			<div class="logo_cca">
+			<img src="img/cca.jpg" height="128" width="375" alt="cca">
+			</div>
+			<div class="descripcion_cca">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta 
+				dolore exercitationem quasi quis laboriosam ea ut deleniti obcaecati 
+				id totam, odio natus necessitatibus cum quia aspernatur harum quas, veniam officia.
+			</p>
+			</div>
+		</div>
+		<div class="des_promo">
+			<div class="p_promo">
+				<h2>Experimenta una nueva forma de enseñar</h2>
+				<p>Como docente puedes desarrollar tus competencias y habilidades
+				creando tus propios cursos de capacitación.
+				</p>
+				<ul>
+					<li>Genera cursos</li>
+					<li>Gestiona materiales</li>
+					<li>Comparte videos</li>
+					<li>Clases en vivo</li>
+					<li>Evaluaciones</li>
+				</ul>
+			</div>
+			<div class="logo_promo">
+				<img src="img/logo_school.png"  alt="logo"/>
+			</div>
+		</div>
+		<div class="inicia">
+		<h2><a href="#">INICIA TU PROJECTO CON NOSOTROS <img src="img/icon/power.png" alt="power"></a></h2>
+		</div>
+		<div class="pie">
+			<div class="pie_seccion"><h3>Contacto</h3></div>
+			<div class="pie_seccion"></div>
+			<div class="pie_seccion"></div>
 		</div>
 	</div>
 </body>
