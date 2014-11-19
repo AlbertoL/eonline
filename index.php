@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>E-OnLine</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/estilos.css"/>
 </head>
@@ -14,10 +15,10 @@
 					<img src="img/logo.png" alt="logo">
 				</div>
 				<ul>
-					<li><a href="#">INICIO</a> </li>
-					<li><a href="#">CURSOS</a> </li>
-					<li><a href="#">INSTITUCIONES</a> </li>
-					<li><a href="#">CONTACTO</a></li>
+					<li><a href="./index.php">INICIO</a> </li>
+					<li><a href="./planes.php">PLANES</a> </li>
+					<li><a href="./login.php">INGRESAR</a> </li>
+					<li><a href="./contacto.php">CONTACTO</a></li>
 				</ul>
 			</nav>
 			<div class="titulo">
@@ -30,12 +31,13 @@
 		</header>
 		<div class="bienvenidos">
 			<h2>Bienvenidos a Educación On-Line</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quasi nisi totam dolorum 
-			itaque reiciendis quo, qui veniam quas, accusantium fuga. Repudiandae laboriosam tempora animi 
-			consequatur dolor vel quos, corporis.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam excepturi nulla magni vitae 
-			assumenda, ex, placeat distinctio aperiam explicabo libero vel voluptatem non adipisci et doloribus 
-			blanditiis aliquid iste eius.
+			<p>E-online busca gestionar y apoyar el proceso de aprendizaje de instituciones y profesores, 
+			brindando una plataforma web que les permita desarrollar un enfoque distinto en 
+			el área de la enseñanza, trayendo beneficios a estos en tiempo, optimización en 
+			el uso de instalaciones y recursos.
+			E-online permite entregar a instituciones y profesores independientes 
+			una plataforma online en el cual podrán compartir contenido académico a 
+			través de distintos contenidos multimedia. 
 			</p>
 		</div>
 		<div class="icon_descripcion">
@@ -63,10 +65,10 @@
 			<img src="img/cca.jpg" height="128" width="375" alt="cca">
 			</div>
 			<div class="descripcion_cca">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta 
-				dolore exercitationem quasi quis laboriosam ea ut deleniti obcaecati 
-				id totam, odio natus necessitatibus cum quia aspernatur harum quas, veniam officia.
+			<p>Centro de Capacitación Angol Ltda. con años de experiencia en la ciudad de Angol, brindando capacitación
+			a un sin número de personas de la comunidad angolina. CCA cuenta con certificaciones SENSE (Servicio Nacional de Capacitación y Empleo),
+			los cuales les permitirá acceder a certificaciones ISO:9001:2008
+
 			</p>
 			</div>
 		</div>
@@ -92,9 +94,19 @@
 		<h2><a href="#">INICIA TU PROJECTO CON NOSOTROS <img src="img/icon/power.png" alt="power"></a></h2>
 		</div>
 		<div class="pie">
-			<div class="pie_seccion"><h3>Contacto</h3></div>
-			<div class="pie_seccion"></div>
-			<div class="pie_seccion"></div>
+			<div class="pie_seccion">
+				<h3>Contacto</h3>
+				<form action="./p_contacto.php">
+					<span>Asunto : </span><input type="text" name="asunto" id="asunto" required placeholder="Motivo Condulta"/>
+					<span>Email : </span><input type="email" name="email" id="email" placeholder="Escribe tu correo" required/>
+					<span>Mensaje</span><textarea name="mensaje" id="mensaje" cols="30" rows="6"></textarea>
+					<input type="submit" class="submit" name="submit" value="Enviar"/>
+				</form>
+			</div>
+			<div class="pie_seccion">
+				<img src="./img/logo.png" height="103" width="427" alt="">
+				<h2>Cursos y Capacitación On-Line</h2>
+			</div>
 		</div>
 	</div>
 </body>
