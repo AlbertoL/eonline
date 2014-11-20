@@ -1,5 +1,7 @@
 @import "fonts.css"
 negro = #000000
+blanco = #ffffff
+gris_suave = #F3F3F3
 
 body 
 	color blanco
@@ -66,8 +68,18 @@ header
 		width 15%		
 		
 .cont_planes
-	width 60%
-	margin 0 auto
+	width 70%
+	margin 0px auto
+	display inline-block
+	height auto
+	// background gray
+	vertical-align top
+	
+	h2
+		color negro
+		text-align left
+		font-family din
+		font-size 2em
 		
 	.item
 		background #636363
@@ -107,7 +119,28 @@ header
 				padding 0px 20px
 				width 100px
 		
-	.item:nth-child(2)
+	.item:nth-child(3)
 			background: linear-gradient(#F9B84A, #DB7224);
 			transform: scale(1.03);
 			box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+.lateral
+	display inline-block
+	width 20%
+	color negro
+	vertical-align top
+	text-align left
+	font-family din
+	
+	h3
+		margin-top 130px
+		font-size 2em
+		border-bottom solid 2px #333
+
+	ul
+		list-style none
+		text-align left
+		padding 0
+		font-size 2em
+		
+		.color
+			color red
