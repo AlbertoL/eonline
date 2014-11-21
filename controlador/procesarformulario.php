@@ -13,7 +13,6 @@ foreach ($_POST as $key => $value) {
 	echo $key." ....> ".$value."<br>";
 }
 
-$consulta = $db->$consulta("insert into usuario(u_name, u_apellido, direccion, u_pass, u_correo, u_rut) values ('$nombre', '$apellido', '$direccion', '$pass', '$correo', '$rut')");
-// header("Location:index.php");
-echo "$consulta";
+$consulta = $db->$consulta("insert into usuario(nombre,apellido,direccion,clave,correo,rut) values ('$nombre','$apellido','$direccion','$pass','$correo','$rut')");
+
 ?>

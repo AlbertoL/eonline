@@ -31,7 +31,7 @@
 			<h2>Registro</h2>
 		</header>
 		<div class="frm">
-		<form id="frmRegistro" class="frmRegistro" action="./controlador/procesarform.php" method="POST">
+		<form id="frmRegistro" class="frmRegistro" action="./controlador/procesarformulario.php" method="POST">
 		<input type="text" name="nombre" id="nombre" required placeholder="NOMBRE"/>
 		<input type="text" name="apellido" id="apellido" placeholder="APELLIDO" required/>
 		<input type="text" name="direccion" id="direccion" required placeholder="DIRECCION"/>
