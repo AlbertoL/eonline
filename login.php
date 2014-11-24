@@ -25,7 +25,7 @@
 			<form action="validar.php" method="POST">
 				<span>Email </span> <input type="email" class="input_text" type="email" name="email" id="email"/>
 				<span>Contraseña</span><input class="input_text" type="password" name="pass" id="pass"/>
-				<input class="boton" type="submit" value="Ingresar"/><input class="boton" type="button" value="Registrar" name="reg" id="reg"/>
+				<input class="boton" type="submit" value="Ingresar"/><input class="boton" type="button" value="Registrar" name="reg" id="reg" onclick="window.location='./registro.php';"/>
 			</form>
 		</div>
 		<div class="img">

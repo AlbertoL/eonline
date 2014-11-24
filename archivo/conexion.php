@@ -9,7 +9,7 @@ class conexion{
 
 
 $this->conexion = (mysql_connect('localhost','root','')) or die(mysql_error());
-  mysql_select_db("eonline",$this->conexion) or die(mysql_error());  
+  mysql_select_db("prueba",$this->conexion) or die(mysql_error());  
 
   mysql_query("SET NAMES 'UTF8'");
   }

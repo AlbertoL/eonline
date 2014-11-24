@@ -13,6 +13,6 @@ foreach ($_POST as $key => $value) {
 	echo $key." ....> ".$value."<br>";
 }
 
-$consulta = $db->$consulta("insert into usuario(nombre,apellido,direccion,clave,correo,rut) values ('$nombre','$apellido','$direccion','$pass','$correo','$rut')");
+$consulta = $db->consulta("INSERT INTO usuario(id_usuario, nombre, apellido, direccion, clave, correo, rut) values(NULL,'".$nombre."','".$apellido."','".$direccion."','".$pass."','".$correo."','".$rut."')");
 
 ?>
