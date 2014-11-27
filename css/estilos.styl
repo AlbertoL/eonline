@@ -1,4 +1,8 @@
+@import 'nib/vendor'
+@import 'nib/gradients'
 @import "fonts.css"
+
+vendor-prefixes = o ms moz webkit
 
 blanco = #ffffff
 gris_suave = #F3F3F3
@@ -42,7 +46,7 @@ header
 		ul 
 			list-style none
 			float right
-			margin 5px 0
+			margin 5px 0px
 			padding 0
 			
 			li
@@ -268,3 +272,32 @@ header
 		.submit
 			background #F6921D
 			border 0
+			
+@media screen and (max-width: 650px)
+	
+	body
+		color red
+		.contenedor
+			header
+				nav
+					width 100%
+					.logo
+						width 170px
+						// min-height 250px
+						// float none
+						img
+							width 170px
+					
+					ul
+						margin 0
+
+@media screen and (max-width: 450px)
+	
+	body
+		color blue
+		.contenedor
+			header
+				nav
+					width 100%
+					.logo
+						width 100%

@@ -9,64 +9,34 @@
 	<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.Rut.js"></script>
-	 <script>
-$(document).ready(function(){
-	$.validator.addMethod('nombre', function(value, element)
-	{
-		return this.optional(element) || /^[a-záéíóúàèìòùäëïöüñ\s]+$/i.test(value);
-	});
-	$.validator.addMethod('apellido', function(value, element)
-	{
-		return this.optional(element) || /^[a-záéíóúàèìòùäëïöüñ\s]+$/i.test(value);
-	});
-	// $.validator.addMethod('rut', function(value, element)
-	// {
-	// 	return this.optional(element) || /^0*(\d{1,3}(\.?\d{3})*)\-?([\dkK])$/.test(value);
-	// });
-	$.validator.addMethod("rut", function(value, element) {
-  	return this.optional(element) || $.Rut.validar(value);
-	}, "Este campo debe ser un rut valido.");
-	$.validator.addMethod('pass', function(value, element)
-	{
-		return this.optional(element) || /^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ0-9!@#\$%\^&\*\?_~\/]{4,20}$/.test(value);
-	});
-	$.validator.addMethod('direccion', function(value, element)
-	{
-		return this.optional(element) || /^[a-záéíóúàèìòùäëïöüñ0-9\s]+$/i.test(value);
-	});
-	$.validator.addMethod('tel', function(value, element)
-	{
-		return this.optional(element) || /^[0-9\-\s]+$/i.test(value);
-	});
-	$("#frmRegistro").validate
-	({
-     		rules:
-		{
-			nombre: {required: true, nombre: true, minlength: 2, maxlength: 30},
-			apellido: {required: true, apellido: true, minlength: 2, maxlength: 30},
-			rut_cl: {required: true, rut: true},
-			pass: {required: true, pass: true, minlength: 3, maxlength: 10},
-			direccion: {required: true, direccion: true, minlength: 5, maxlength: 50},
-			email: {required: true, email: true, minlength: 6, maxlength: 40},
-			tel: {required: true, tel: true, minlength: 4, maxlength: 20}
-		},
-		messages:
-		{
-			nombre: {required: 'Campo requerido', nombre: 'Formato incorrecto', minlength: 'Debe tener al menos 2 letras', maxlength: 'El máximo de caracteres son 30'},
-			apellido: {required: 'Campo requerido', apellido: 'Formato incorrecto', minlength: 'Debe tener al menos 2 letras', maxlength: 'El máximo de caracteres son 30'},
-			rut_cl: {required: 'Campo requerido', rut: 'Rut invalido'},
-			pass: {required: 'Campo requerido', pass: 'Letras y números', minlength: 'Contraseña es muy pequeña', maxlength: 'Contraseña muy larga'},
-			direccion: {required: 'Campo requerido', direccion: 'Letras y numeros', minlength: 'direccion muy corta', maxlength: 'Direccion muy grande'},
-			email: {required: 'Campo requerido', email: 'name@micuenta.com', minlength: 'El mínimo de caracteres es 5', maxlength: 'El máximo de caracteres son 40'},
-			tel: {required: 'Campo requerido', tel: 'codigo - numero', minlength: 'El mínimo de caracteres es 6', maxlength: 'El máximo de caracteres son 20'}
-       	}
-    	});
-	$('#rut_cl').Rut({
-		validation: false
-	});
-});
-</script>
-
+	<script type="text/javascript" src="./js/validar.js"></script>
+	<script type="text/javascript">
+		function validar(nombre,apellido){
+				var xmlhttp;
+				if (window.XMLHttpRequest){
+					xmlhttp=new XMLHttpRequest();
+				}
+				else{
+					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange=function(){
+					if (xmlhttp.readyState==4 && xmlhttp.status==200)
+					{
+						document.getElementById("frm").innerHTML=xmlhttp.responseText;
+					}
+				}
+				xmlhttp.open("POST","./controlador/validar.php",true);
+				xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				xmlhttp.send("n="+nombre+"&a="+apellido);
+			};
+	</script>
+	<script type="text/javascript">
+		function presion_bot(){
+			var nombre = document.getElementById('nombre').value;
+			var apellido = document.getElementById('apellido').value;
+			validar(nombre,apellido);
+		}
+	</script>
 </head>
 <body>
 	<div class="contenedor">
@@ -84,9 +54,9 @@ $(document).ready(function(){
 			</nav>
 			<h2>Registro</h2>
 		</header>
-		<div class="frm">
+		<div class="frm" id="frm">
 			<h2>Ingrese Sus Datos</h2>
-			<form id="frmRegistro" class="frmRegistro" action="../controlador/procesarformulario.php" method="POST">
+			<form id="frmRegistro" class="frmRegistro" method="POST">
 			<div class="personal_date">
 				<h3>Datos Personales</h3>
 				<p>Nombre*</p>
@@ -113,10 +83,9 @@ $(document).ready(function(){
 					<option value="3">PLAN PREMIUM</option>
 				</select>
 				<p></p>
-				<input id="btn" class="btn" type="submit" value="Registrar">
+				<input id="btn" class="btn" type="button" onclick="presion_bot()" value="Registrar">
 			</div>
 			</form>
-
 		</div>
 	</div>
 </body>

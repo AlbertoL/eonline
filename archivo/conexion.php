@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+error_reporting(E_ALL);
 class conexion{
  private $conexion;
  private $total_consultas;
@@ -38,16 +38,22 @@ $this->conexion = (mysql_connect('localhost','root','')) or die(mysql_error());
     $this->consulta= mysql_query($cons,$this->conexion->conexion());
     return $this->consulta;
   } 
-  
+function limpiarInput($string)
+  {
+    $string=trim($string);
+    $string=stripslashes($string);
+    $string=strip_tags($string);
+    return $string;
+  }  
 function cleanString($string)
 {
-    $string=trim($string);
-    $string=mysql_escape_string($string);
+  $string=trim($string);
+  $string=stripslashes(strip_tags($string));
   $string=htmlspecialchars($string);
 
     return $string;
 }
- function fechaSql($fecha_nom){
+function fechaSql($fecha_nom){
 $patron = explode("/", $fecha_nom);
 $fechana=$patron[2]."-".$patron[0]."-".$patron[1];
 return $fechana;
@@ -62,7 +68,7 @@ function quitar_tildes ($cadena)
 { 
   $cadBuscar = array("á", "Á", "é", "É", "í", "Í", "ó", "Ó", "ú", "Ú"); 
   $cadPoner = array("a", "A", "e", "E", "i", "I", "o", "O", "u", "U"); 
-  $cadena = str_replace ($cadBuscar, $cadPoner, $cadena); 
+  $cadena = str_replace($cadBuscar, $cadPoner, $cadena); 
   $cadena=  strtoupper($cadena);
   return $cadena; 
 } 
