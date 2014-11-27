@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="./js/jquery.Rut.js"></script>
 	<script type="text/javascript" src="./js/validar.js"></script>
 	<script type="text/javascript">
-		function validar(nombre,apellido){
+		function validar(nombre,apellido,rut,pass,direccion,email,tel){
 				var xmlhttp;
 				if (window.XMLHttpRequest){
 					xmlhttp=new XMLHttpRequest();
@@ -27,14 +27,19 @@
 				}
 				xmlhttp.open("POST","./controlador/validar.php",true);
 				xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-				xmlhttp.send("n="+nombre+"&a="+apellido);
+				xmlhttp.send("n="+nombre+"&a="+apellido+"&r="+rut+"&p="+pass+"&d="+direccion+"&e="+email+"&t="+tel);
 			};
 	</script>
 	<script type="text/javascript">
 		function presion_bot(){
 			var nombre = document.getElementById('nombre').value;
 			var apellido = document.getElementById('apellido').value;
-			validar(nombre,apellido);
+			var rut = document.getElementById('rut_cl').value;
+			var pass = document.getElementById('pass').value;
+			var direccion = document.getElementById('direccion').value;
+			var email = document.getElementById('email').value;
+			var tel = document.getElementById('tel').value;
+			validar(nombre,apellido,rut,pass,direccion,email,tel);
 		}
 	</script>
 </head>
