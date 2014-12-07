@@ -50,38 +50,36 @@ function cleanString($string)
   $string=trim($string);
   $string=stripslashes(strip_tags($string));
   $string=htmlspecialchars($string);
-
     return $string;
 }
-function validaRut($rut){
-    if(strpos($rut,"-")==false){
-        $RUT[0] = substr($rut, 0, -1);
-        $RUT[1] = substr($rut, -1);
-    }else{
-        $RUT = explode("-", trim($rut));
-    }
-    $elRut = str_replace(".", "", trim($RUT[0]));
-    $factor = 2;
-    $suma = '';
-    for($i = strlen($elRut)-1; $i >= 0; $i--):
-        $factor = $factor > 7 ? 2 : $factor;
-        $suma += $elRut{$i}*$factor++;
-    endfor;
-    $resto = $suma % 11;
-    $dv = 11 - $resto;
-    if($dv == 11){
-        $dv=0;
-    }else if($dv == 10){
-        $dv="k";
-    }else{
-        $dv=$dv;
-    }
-   if($dv == trim(strtolower($RUT[1]))){
-       return true;
-   }else{
-       return false;
-   }
+
+
+function verifica_RUT($rut='') {
+  $sep = array();  $multi = 2;  $suma = 0;
+  if (empty($rut)) return 1;
+  $tmpRUT = preg_replace('/[^0-9kK]/','',$rut);
+  if (strlen($tmpRUT) == 8 ) $tmpRUT = '0'.$tmpRUT;
+  if (strlen($tmpRUT) != 9) return 2;
+  $sep['rut'] = substr($tmpRUT,0,8);
+  $sep['dv']  = substr($tmpRUT, -1);
+  if ($sep['dv'] == 'k') $sep['dv'] = 'K';
+  if (!is_numeric($sep['rut'])) return 3;
+  if (empty($sep['rut']) OR $sep['dv'] == '') return 4;
+  for ($i=strlen($sep['rut']) - 1; $i >= 0; $i--) {
+    $suma = $suma + $sep['rut'][$i] * $multi;
+    if ($multi == 7) $multi = 2;
+    else $multi++;
+  }
+  $resto = $suma % 11;
+  if ($resto == 1) $sep['dvt'] = 'K';
+  else {
+    if ($resto == 0) $sep['dvt'] = '0';
+    else $sep['dvt'] = 11 - $resto;
+  }
+  if ($sep['dvt'] != $sep['dv']) return 5;
+  return 0;
 }
+
 function fechaSql($fecha_nom){
 $patron = explode("/", $fecha_nom);
 $fechana=$patron[2]."-".$patron[0]."-".$patron[1];

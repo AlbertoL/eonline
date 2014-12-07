@@ -2,16 +2,19 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Registro</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="E-OnLine es una plataforma para instituciones y profesores, para desarrollar  una nuevs forma de aprendizaje"/>
+	<title>Registro</title>
+	<meta name="keywords" content="educacion, virtual, educacion-virtual, los-angeles, videos, profesores, instituciones"/>	
 	<link rel="stylesheet" href="./css/normalize.css"/>
 	<link rel="stylesheet" href="./css/css_registro.css">
 	<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./js/modernizr.js"></script>
 	<script type="text/javascript" src="./js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.Rut.js"></script>
 	<script type="text/javascript" src="./js/validar.js"></script>
 	<script type="text/javascript">
-		function validar(nombre,apellido,rut,pass,direccion,email,tel){
+		function validar(nombre,apellido,rut,pass,direccion,email,tel,plan){
 				var xmlhttp;
 				if (window.XMLHttpRequest){
 					xmlhttp=new XMLHttpRequest();
@@ -27,7 +30,7 @@
 				}
 				xmlhttp.open("POST","./controlador/validar.php",true);
 				xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-				xmlhttp.send("n="+nombre+"&a="+apellido+"&r="+rut+"&p="+pass+"&d="+direccion+"&e="+email+"&t="+tel);
+				xmlhttp.send("n="+nombre+"&a="+apellido+"&r="+rut+"&p="+pass+"&d="+direccion+"&e="+email+"&t="+tel+"&plan="+plan);
 			};
 	</script>
 	<script type="text/javascript">
@@ -39,7 +42,8 @@
 			var direccion = document.getElementById('direccion').value;
 			var email = document.getElementById('email').value;
 			var tel = document.getElementById('tel').value;
-			validar(nombre,apellido,rut,pass,direccion,email,tel);
+			var plan = document.getElementById('plan').value;
+			validar(nombre,apellido,rut,pass,direccion,email,tel,plan);
 		}
 	</script>
 </head>
@@ -59,10 +63,10 @@
 			</nav>
 			<h2>Registro</h2>
 		</header>
+		<form id="frmRegistro" class="frmRegistro" method="POST">
 		<div class="frm" id="frm">
 			<h2>Ingrese Sus Datos</h2>
-			<form id="frmRegistro" class="frmRegistro" method="POST">
-			<div class="personal_date">
+			<div class="personal_date" id="personal_date">
 				<h3>Datos Personales</h3>
 				<p>Nombre*</p>
 				<input type="text" name="nombre" id="nombre" required />
@@ -90,8 +94,8 @@
 				<p></p>
 				<input id="btn" class="btn" type="button" onclick="presion_bot()" value="Registrar">
 			</div>
-			</form>
 		</div>
+		</form>
 	</div>
 </body>
 </html>
