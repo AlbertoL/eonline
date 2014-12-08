@@ -8,13 +8,8 @@
 	<meta name="keywords" content="educacion, virtual, educacion-virtual, los-angeles, videos, profesores, instituciones"/>	
 	<link rel="stylesheet" href="./css/normalize.css"/>
 	<link rel="stylesheet" href="./css/css_registro.css">
-	<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="./js/modernizr.js"></script>
-	<script type="text/javascript" src="./js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="./js/jquery.Rut.js"></script>
-	<script type="text/javascript" src="./js/validar.js"></script>
 	<script type="text/javascript">
-		function validar(nombre,apellido,rut,pass,direccion,email,tel,plan){
+		function validar(nombre,apellido,rut,pass,direccion,email,tel){
 				var xmlhttp;
 				if (window.XMLHttpRequest){
 					xmlhttp=new XMLHttpRequest();
@@ -26,11 +21,16 @@
 					if (xmlhttp.readyState==4 && xmlhttp.status==200)
 					{
 						document.getElementById("frm").innerHTML=xmlhttp.responseText;
+						// setTimeout("location.href= './index.php'",3000);
+						// if (xmlhttp.responseText == "usuario registrado correctamente") {
+						// 	setTimeout("location.href= './index.php'",3000);
+						// };
+						
 					}
 				}
 				xmlhttp.open("POST","./controlador/validar.php",true);
 				xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-				xmlhttp.send("n="+nombre+"&a="+apellido+"&r="+rut+"&p="+pass+"&d="+direccion+"&e="+email+"&t="+tel+"&plan="+plan);
+				xmlhttp.send("n="+nombre+"&a="+apellido+"&r="+rut+"&p="+pass+"&d="+direccion+"&e="+email+"&t="+tel);
 			};
 	</script>
 	<script type="text/javascript">
@@ -42,8 +42,7 @@
 			var direccion = document.getElementById('direccion').value;
 			var email = document.getElementById('email').value;
 			var tel = document.getElementById('tel').value;
-			var plan = document.getElementById('plan').value;
-			validar(nombre,apellido,rut,pass,direccion,email,tel,plan);
+			validar(nombre,apellido,rut,pass,direccion,email,tel);
 		}
 	</script>
 </head>
@@ -85,18 +84,18 @@
 				<input type="text" name="email" id="email" class="mail" />
 				<p>Teléfono*</p>
 				<input type="text" name="tel" id="tel"  required/>
-				<h3>Plan</h3>
-				<select name="plan" id="plan">
-					<option value="1">PLAN BÁSICO</option>
-					<option value="2">PLAN PLUS</option>
-					<option value="3">PLAN PREMIUM</option>
-				</select>
+				
 				<p></p>
 				<input id="btn" class="btn" type="button" onclick="presion_bot()" value="Registrar">
 			</div>
 		</div>
 		</form>
 	</div>
+	<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./js/modernizr.js"></script>
+	<script type="text/javascript" src="./js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.Rut.js"></script>
+	<script type="text/javascript" src="./js/validar.js"></script>
 </body>
 </html>
 </body>

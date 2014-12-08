@@ -9,7 +9,7 @@ class conexion{
 
 
 $this->conexion = (mysql_connect('localhost','root','')) or die(mysql_error());
-  mysql_select_db("prueba",$this->conexion) or die(mysql_error());  
+  mysql_select_db("eonline",$this->conexion) or die(mysql_error());  
 
   mysql_query("SET NAMES 'UTF8'");
   }
@@ -29,6 +29,9 @@ $this->conexion = (mysql_connect('localhost','root','')) or die(mysql_error());
   }
  public function num_rows($consulta){
   return mysql_num_rows($consulta);
+  }
+  public function affected_rows($consulta){
+  return mysql_affected_rows($consulta);
   }
  public function getTotalConsultas(){
   return $this->total_consultas;
