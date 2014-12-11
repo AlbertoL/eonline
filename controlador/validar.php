@@ -64,12 +64,16 @@ if ($error_validacion == "") {
 			$consulta2 = $db->consulta("INSERT INTO tb_usuario(u_nombre,u_apellido,u_rut,u_direccion,u_email,u_fono,u_password,id_tipo_usuario) values ('$nombre','$apellido','$rut','$direccion','$email','$telefono','$pass','$tipo')");
 			// echo "usuario registrado correctamente";
 
-			// if($db->affected_rows($consulta2) > 0){
-  	// 			echo "usuario registrado correctamente";
-			// }
-			// else{
-   // 				echo "No se pudo grabar";
-			// 	}
+			if($db->affected_rows($consulta2) == 1){
+  				$mensaje="Insercion exitosa";
+     echo"<script>";
+ echo"if(confirm('$mensaje'));";
+  echo"window.location='mantenedorDigitador.php';"; 
+   echo"</script>";
+			}
+			else{
+   				echo "Algo salió mal";
+				}
 		}else{
 			$error_validacion .= "El usuario ya existe";
 			echo '<h2>Ingrese Sus Datos</h2><p class=msg_error_php>'.$error_validacion.'</p>

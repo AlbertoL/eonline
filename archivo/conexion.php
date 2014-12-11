@@ -31,7 +31,8 @@ $this->conexion = (mysql_connect('localhost','root','')) or die(mysql_error());
   return mysql_num_rows($consulta);
   }
   public function affected_rows($consulta){
-  return mysql_affected_rows($consulta);
+  $fila = mysql_affected_rows();
+  return $fila;
   }
  public function getTotalConsultas(){
   return $this->total_consultas;

@@ -31,11 +31,7 @@
 		</header>
 		<div class="bienvenidos">
 			<h2>Bienvenidos a Educación On-Line</h2>
-			<p>E-online busca gestionar y apoyar el proceso de aprendizaje de instituciones y profesores, 
-			brindando una plataforma web que les permita desarrollar un enfoque distinto en 
-			el área de la enseñanza, trayendo beneficios a estos en tiempo, optimización en 
-			el uso de instalaciones y recursos.
-			E-online permite entregar a instituciones y profesores independientes 
+			<p>E-online permite entregar a instituciones y profesores independientes 
 			una plataforma online en el cual podrán compartir contenido académico a 
 			través de distintos contenidos multimedia. 
 			</p>
@@ -68,7 +64,6 @@
 			<p>Centro de Capacitación Angol Ltda. con años de experiencia en la ciudad de Angol, brindando capacitación
 			a un sin número de personas de la comunidad angolina. CCA cuenta con certificaciones SENSE (Servicio Nacional de Capacitación y Empleo),
 			los cuales les permitirá acceder a certificaciones ISO:9001:2008
-
 			</p>
 			</div>
 		</div>
@@ -91,23 +86,25 @@
 			</div>
 		</div>
 		<div class="inicia">
-		<h2><a href="#">INICIA TU PROJECTO CON NOSOTROS <img src="img/icon/power.png" alt="power"></a></h2>
+		<h2><a href="#">INICIA TU PROYECTO CON NOSOTROS <img src="img/icon/power.png" alt="power"></a></h2>
 		</div>
 		<div class="pie">
 			<div class="pie_seccion">
 				<h3>Contacto</h3>
-				<form action="./p_contacto.php">
-					<span>Asunto : </span><input type="text" name="asunto" id="asunto" required placeholder="Motivo Condulta"/>
-					<span>Email : </span><input type="email" name="email" id="email" placeholder="Escribe tu correo" required/>
-					<span>Mensaje</span><textarea name="mensaje" id="mensaje" cols="30" rows="6"></textarea>
-					<input type="submit" class="submit" name="submit" value="Enviar"/>
-				</form>
+				<ul>
+					<li><span>E-mail: </span>info@eonline.cl</li>
+					<li><span>Teléfono: </span>(+569) 54023057</li>
+					<li><span>Dirección: </span>Ducado de Algete 117, Villa Galilea</li>
+					<li><span>Facebook: </span>E-OnLine</li>
+				</ul>
 			</div>
 			<div class="pie_seccion">
-				<img src="./img/logo.png" height="103" width="427" alt="">
+				<img src="./img/logo.png" alt="logo">
 				<h2>Cursos y Capacitación On-Line</h2>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./js/modernizr.js"></script>
 </body>
 </html>

@@ -21,9 +21,11 @@
 					if (xmlhttp.readyState==4 && xmlhttp.status==200)
 					{
 						document.getElementById("frm").innerHTML=xmlhttp.responseText;
-						// setTimeout("location.href= './index.php'",3000);
-						// if (xmlhttp.responseText == "usuario registrado correctamente") {
-						// 	setTimeout("location.href= './index.php'",3000);
+
+						setTimeout("location.href= './index.php'",3000);
+						// if (xmlhttp.responseText == 1) {
+						// 	setTimeout("document.location.href='index.php'",3000);
+						// 		// document.location.href='index.php';
 						// };
 						
 					}

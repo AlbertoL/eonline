@@ -14,21 +14,15 @@ $(document).ready(function(){
 			 		$(location).attr('href','./restringido/indexadministrador.php');
 					break;
 					case '2':
-					$(location).attr('href','./restringido/indexolave.php');
+					$(location).attr('href','./restringido/clientes/index.php');
 					break;
 					case '0':
-					alert("ingresa un usuario po awe.");
+					alert("Ingresa un usuario ususario valido");
 					break;
 					default:
-					alert("paso cualquier cosa");
+					alert("Error Inesperado");
 				}
 
-
-			/*	if(respuesta==1){
-						 $(location).attr('href','./restringido/index.php');
-				}else{
-					$('#datos').html("<h1>USUARIO NO EXISTE!!!</h1>");
-				}*/
 			}
 		});	
 		return false;
