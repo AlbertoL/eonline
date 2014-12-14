@@ -18,7 +18,7 @@ include '../../controlador/sesion.php';
 				</div>
 				<ul>
 					<li><a href="#">Cursos</a></li>
-					<li><a href="#">Encargados</a></li>
+					<li><a href="#">Asignaturas</a></li>
 					<li><a href="#">Profesores</a></li>
 					<li><a href="#">Alumnos</a></li>
 				</ul>
@@ -26,29 +26,29 @@ include '../../controlador/sesion.php';
 	</header>
 		<h1>Mantenedores</h1>
 		<div class="mantenedores">
+		<div class="secciones">
+				<img src="img/icons/factory3.png" alt="img_institucion"> 
+				<h3>Instituciones</h3> 
+				<input type="button" value="ver" onclick="window.location='./ver_institucion.php';">
+				<input type="button" value="crear" onclick="window.location='./n_institucion.php';">
+			</div>
 			<div class="secciones">
-				<img src="img/icons/black268.png" height="80" width="128" alt=""> 
+				<img src="img/icons/books8.png" alt="img_cursos"> 
 				<h3>Cursos</h3> 
-				<input type="button" value="ver">
-				<input type="button" value="nuevo" onclick="window.location='./n_curso.php';">
+				<input type="button" value="ver" onclick="window.location='./ver_curso.php';">
+				<input type="button" value="crear" onclick="window.location='./n_curso.php';">
 			</div>
 			<div class="secciones">
-				<img src="img/icons/career.png" height="89" width="128" alt=""> 
-				<h3>Encargados</h3> 
-				<input type="button" value="ver">
-				<input type="button" value="nuevo">
-			</div>
-			<div class="secciones">
-				<img src="img/icons/teacher.png" height="128" width="128" alt=""> 
+				<img src="img/icons/teacher.png" alt="img_profesor"> 
 				<h3>Profesores</h3> 
-				<input type="button" value="ver">
-				<input type="button" value="nuevo">
+				<input type="button" value="ver" onclick="window.location='./ver_profesores.php';">
+				<input type="button" value="Registrar" onclick="window.location='./n_profesor.php';">
 			</div>
 			<div class="secciones">
-				<img src="img/icons/class6.png" height="130" width="128" alt=""> 
+				<img src="img/icons/class6.png" alt="img_alumnos"> 
 				<h3>Alumnos</h3> 
-				<input type="button" value="ver">
-				<input type="button" value="nuevo" onclick="window.location='./n_alumno.php';">
+				<input type="button" value="ver" onclick="window.location='./ver_alumnos.php';">
+				<input type="button" value="Registrar" onclick="window.location='./n_alumnos.php';">
 			</div>
 		</div>
 

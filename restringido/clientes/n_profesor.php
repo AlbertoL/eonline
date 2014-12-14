@@ -24,18 +24,25 @@ include '../../controlador/sesion.php';
 				</ul>
 			</nav>
 	</header>
-		<h1>Mantenedor Curso</h1>
+		<h1>Mantenedor Profesores</h1>
 		<div class="form">
 			<form action="#">
 				<div class="datos">
-				<h3>Formulario Curso</h3>
-				<select name="institucion" id="institucion" class="institucion">
-					<option value="0">Institucion</option>
-				</select>
-				<p>Nombre Curso*</p>
+				<h3>Formulario Profesor</h3>
+				<p>Nombre *</p>
 				<input type="text" name="nombre" id="nombre" class="nombre" required />
-				<p>Descripción*</p>
-				<textarea name="description" id="description" cols="30" rows="10"></textarea>
+				<p>Apellido *</p>
+				<input type="text" name="apellido" id="apellido" class="apellido" required />
+				<p>Rut *</p>
+				<input type="text" name="rut" id="rut" class="rut" required />
+				<p>Dirección</p>
+				<input type="text" name="direccion" id="direccion" class="direccion" required />
+				<p>E-mail</p>
+				<input type="email" class="correo" id="correo">
+				<p>Telefono</p>
+				<input type="text" class="tel" id="tel" />
+				<p>Contraseña</p>
+				<input type="password" class="password" id="password" />
 				<input type="submit" id="boton" class="boton" value="Crear">
 				<a class="cancelar" id="cancelar" href="javascript: history.go(-1)">Cancelar</a>
 				</div>
