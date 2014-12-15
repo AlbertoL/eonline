@@ -48,7 +48,7 @@ include '../../controlador/sesion.php';
 					<td>mail@gmail.com</td>
 					<td>9999999999</td>
 					<td><a href="#">Asignar</a></td>
-					<td><a href="#">Editar</a></td>
+					<td><a href="./mod_profesores.php">Editar</a></td>
 					<td><a href="#">Eliminar</a></td>
 				</tr>
 			</tbody>
