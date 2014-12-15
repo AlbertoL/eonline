@@ -41,8 +41,6 @@ include '../../controlador/sesion.php';
 				<input type="email" class="correo" id="correo">
 				<p>Telefono</p>
 				<input type="text" class="tel" id="tel" />
-				<p>Contraseña</p>
-				<input type="password" class="password" id="password" />
 				<input type="submit" id="boton" class="boton" value="Crear">
 				<a class="cancelar" id="cancelar" href="javascript: history.go(-1)">Cancelar</a>
 				</div>

@@ -11,7 +11,7 @@ $(document).ready(function(){
 			success:function(respuesta){
 				switch(respuesta){
 					case '1':
-			 		$(location).attr('href','./restringido/indexadministrador.php');
+			 		$(location).attr('href','./restringido/admin/index.php');
 					break;
 					case '2':
 					$(location).attr('href','./restringido/clientes/index.php');

@@ -1,5 +1,9 @@
+@import 'nib/vendor'
+@import 'nib/gradients'
 @import "fonts.css"
 
+vendor-prefixes = o webkit moz ms official
+prepend(vendor-prefixes, ms, o)
 
 blanco = #ffffff
 gris_suave = #F3F3F3
@@ -55,6 +59,8 @@ header
 					font-weight 400
 					padding 10px
 					text-decoration none
+h2
+	color negro
 
 .login
 	width 40%
