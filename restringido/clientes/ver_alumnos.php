@@ -33,6 +33,7 @@ include '../../controlador/sesion.php';
 					<th>Dirección</th>
 					<th>E-mail</th>
 					<th>Telefono</th>
+					<th>Asignar</th>
 					<th>Editar</th>
 					<th>Eliminar</th>
 				</tr>
@@ -46,6 +47,7 @@ include '../../controlador/sesion.php';
 					<td>Avenida 123</td>
 					<td>mail@gmail.com</td>
 					<td>9999999999</td>
+					<td><a href="#">Asignar</a></td>
 					<td><a href="#">Editar</a></td>
 					<td><a href="#">Eliminar</a></td>
 				</tr>

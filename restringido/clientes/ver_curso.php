@@ -22,7 +22,8 @@ include '../../controlador/sesion.php';
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Nombre</th>
+					<th>Institución</th>
+					<th>Curso</th>
 					<th>Descripción</th>
 					<th>Editar</th>
 					<th>Eliminar</th>
@@ -32,8 +33,9 @@ include '../../controlador/sesion.php';
 				<tr>
 					<td>1</td>
 					<td>Nombre Institución</td>
+					<td>Nombre Curso</td>
 					<td>mail@gmail.com</td>
-					<td><a href="#">Editar</a></td>
+					<td><a href="./mod_curso.php">Editar</a></td>
 					<td><a href="#">Eliminar</a></td>
 				</tr>
 			</tbody>

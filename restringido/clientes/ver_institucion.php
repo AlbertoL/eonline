@@ -23,6 +23,7 @@ include '../../controlador/sesion.php';
 				<tr>
 					<th>ID</th>
 					<th>Nombre</th>
+					<th>Descripción</th>
 					<th>E-mail</th>
 					<th>Estado</th>
 					<th>Plan</th>
@@ -34,10 +35,11 @@ include '../../controlador/sesion.php';
 				<tr>
 					<td>1</td>
 					<td>Nombre Institución</td>
+					<td>Descripción Intitución</td>
 					<td>mail@gmail.com</td>
 					<td>Activo</td>
 					<td>Básico</td>
-					<td><a href="#">Editar</a></td>
+					<td><a href="./mod_institucion.php">Editar</a></td>
 					<td><a href="#">Eliminar</a></td>
 				</tr>
 			</tbody>
